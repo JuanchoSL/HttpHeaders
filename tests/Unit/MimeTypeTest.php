@@ -10,187 +10,111 @@ class MimeTypeTest extends TestCase
 {
     public function testExtensionJs()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_JS);
-        $this->assertEquals('text/javascript', $response);
+        $this->assertEquals('text/javascript', MimeTypes::TYPE_MIME_JS);
     }
-    public function testExtensionXls()
+
+    public function testExtensionExcel()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_XLS);
-        $this->assertEquals('application/vnd.ms-excel', $response);
+        $this->assertEquals('application/vnd.ms-excel', MimeTypes::TYPE_MIME_EXCEL);
     }
-    public function testExtensionXlsx()
+    public function testExtensionWord()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_XLSX);
-        $this->assertEquals('application/vnd.ms-excel', $response);
+        $this->assertEquals('application/vnd.ms-word', MimeTypes::TYPE_MIME_WORD);
     }
-    public function testExtensionDoc()
+    public function testExtensionPowerpoint()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_DOC);
-        $this->assertEquals('application/vnd.ms-word', $response);
-    }
-    public function testExtensionDocx()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_DOCX);
-        $this->assertEquals('application/vnd.ms-word', $response);
-    }
-    public function testExtensionPpt()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_PPT);
-        $this->assertEquals('application/vnd.mspowerpoint', $response);
-    }
-    public function testExtensionPptx()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_PPTX);
-        $this->assertEquals('application/vnd.mspowerpoint', $response);
+        $this->assertEquals('application/vnd.mspowerpoint', MimeTypes::TYPE_MIME_POWERPOINT);
     }
     public function testExtensionCsv()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_CSV);
-        $this->assertEquals('applicattion/csv', $response);
+        $this->assertEquals('text/csv', MimeTypes::TYPE_MIME_CSV);
     }
     public function testExtensionPdf()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_PDF);
-        $this->assertEquals('applicattion/pdf', $response);
+        $this->assertEquals('application/pdf', MimeTypes::TYPE_MIME_PDF);
     }
     public function testExtensionJson()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_JSON);
-        $this->assertEquals('applicattion/json', $response);
+        $this->assertEquals('application/json', MimeTypes::TYPE_MIME_JSON);
     }
     public function testExtensionXml()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_XML);
-        $this->assertEquals('applicattion/xml', $response);
-    }
-    public function testExtensionHtm()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_HTM);
-        $this->assertEquals('text/plain', $response);
+        $this->assertEquals('application/xml', MimeTypes::TYPE_MIME_XML);
     }
     public function testExtensionHtml()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_HTML);
-        $this->assertEquals('text/plain', $response);
-    }
-    public function testExtensionTxt()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_TXT);
-        $this->assertEquals('text/plain', $response);
+        $this->assertEquals('text/html', MimeTypes::TYPE_MIME_HTML);
     }
     public function testExtensionPlain()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_PLAIN);
-        $this->assertEquals('text/plain', $response);
+        $this->assertEquals('text/plain', MimeTypes::TYPE_MIME_PLAIN);
     }
     public function testExtensionCss()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_CSS);
-        $this->assertEquals('text/plain', $response);
-    }
-    public function testExtensionJpg()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_JPG);
-        $this->assertEquals('image/jpeg', $response);
+        $this->assertEquals('text/css', MimeTypes::TYPE_MIME_CSS);
     }
     public function testExtensionJpeg()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_JPEG);
-        $this->assertEquals('image/jpeg', $response);
+        $this->assertEquals('image/jpeg', MimeTypes::TYPE_MIME_JPEG);
     }
     public function testExtensionPng()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_PNG);
-        $this->assertEquals('image/png', $response);
+        $this->assertEquals('image/png', MimeTypes::TYPE_MIME_PNG);
     }
     public function testExtensionBmp()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_BMP);
-        $this->assertEquals('image/bmp', $response);
+        $this->assertEquals('image/bmp', MimeTypes::TYPE_MIME_BMP);
     }
     public function testExtensionWebp()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_WEBP);
-        $this->assertEquals('image/webp', $response);
+        $this->assertEquals('image/webp', MimeTypes::TYPE_MIME_WEBP);
     }
     public function testExtensionGif()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_GIF);
-        $this->assertEquals('image/gif', $response);
+        $this->assertEquals('image/gif', MimeTypes::TYPE_MIME_GIF);
     }
     public function testExtensionIco()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_ICO);
-        $this->assertEquals('image/x-icon', $response);
-    }
-    public function testExtensionMpg()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_MPG);
-        $this->assertEquals('"video/mpeg', $response);
+        $this->assertEquals('image/x-icon', MimeTypes::TYPE_MIME_ICO);
     }
     public function testExtensionMpeg()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_MPEG);
-        $this->assertEquals('video/mpeg', $response);
-    }
-    public function testExtensionAvi()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_AVI);
-        $this->assertEquals('"video/mpeg', $response);
-    }
-    public function testExtensionMp3()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_MP3);
-        $this->assertEquals('"video/mpeg', $response);
+        $this->assertEquals('video/mpeg', MimeTypes::TYPE_MIME_MPEG);
     }
     public function testExtensionEot()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_EOT);
-        $this->assertEquals('application/vnd.ms-fontobject', $response);
+        $this->assertEquals('application/vnd.ms-fontobject', MimeTypes::TYPE_MIME_EOT);
     }
     public function testExtensionTtf()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_TTF);
-        $this->assertEquals('application/x-font-ttf', $response);
+        $this->assertEquals('font/ttf', MimeTypes::TYPE_MIME_TTF);
     }
     public function testExtensionWoff()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_WOFF);
-        $this->assertEquals('application/font-woff', $response);
+        $this->assertEquals('font/woff', MimeTypes::TYPE_MIME_WOFF);
     }
     public function testExtensionWoff2()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_WOFF2);
-        $this->assertEquals('application/font-woff2', $response);
+        $this->assertEquals('font/woff2', MimeTypes::TYPE_MIME_WOFF2);
     }
     public function testExtensionOtf()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_OTF);
-        $this->assertEquals('font/opentype', $response);
+        $this->assertEquals('font/otf', MimeTypes::TYPE_MIME_OTF);
     }
     public function testExtensionApk()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_APK);
-        $this->assertEquals('application/vnd.android.package-archive', $response);
+        $this->assertEquals('application/vnd.android.package-archive', MimeTypes::TYPE_MIME_APK);
     }
-    public function testExtensionExe()
+    public function testExtensionOctet()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_EXE);
-        $this->assertEquals('application/octet-stream', $response);
+        $this->assertEquals('application/octet-stream', MimeTypes::TYPE_MIME_OCTET);
     }
     public function testExtensionZip()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_ZIP);
-        $this->assertEquals('application/octet-stream', $response);
-    }
-    public function testExtensionRar()
-    {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_RAR);
-        $this->assertEquals('application/octet-stream', $response);
+        $this->assertEquals('application/zip', MimeTypes::TYPE_MIME_ZIP);
     }
     public function testExtensionSvg()
     {
-        $response = MimeTypes::get(MimeTypes::TYPE_EXTENSION_SVG);
-        $this->assertEquals('image/svg+xml', $response);
+        $this->assertEquals('image/svg+xml', MimeTypes::TYPE_MIME_SVG);
     }
 }
