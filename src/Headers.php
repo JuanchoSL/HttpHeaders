@@ -7,122 +7,66 @@ class Headers
 
     protected static string $httpVersion = 'HTTP/1.1';
 
-    const CONTINUE_ = 100;
-    const SWITCHING_PROTOCOLS = 101;
-    const PROCESSING = 102;
-    //Successful 2xx
-    const OK = 200;
-    const CREATED = 201;
-    const ACCEPTED = 202;
-    const NON_AUTHORITATIVE_INFORMATION = 203;
-    const NO_CONTENT = 204;
-    const RESET_CONTENT = 205;
-    const PARTIAL_CONTENT = 206;
-    const MULTI_STATUS = 207;
-    const ALREADY_REPORTED = 208;
-    const IM_USED = 226;
-    //Redirection 3xx
-    const MULTIPLE_CHOICES = 300;
-    const MOVED_PERMANENTLY = 301;
-    const FOUND = 302;
-    const SEE_OTHER = 303;
-    const NOT_MODIFIED = 304;
-    const USE_PROXY = 305;
-    //const '306 (Unused)';
-    const TEMPORARY_REDIRECT = 307;
-    const PERMANENT_REDIRECT = 308;
-    //Client Error 4xx
-    const BAD_REQUEST = 400;
-    const UNAUTHORIZED = 401;
-    const PAYMENT_REQUIRED = 402;
-    const FORBIDDEN = 403;
-    const NOT_FOUND = 404;
-    const METHOHD_NOT_ALLOWED = 405;
-    const NOT_ACCEPTABLE = 406;
-    const PROXY_AUTHENTICATION_REQUIRED = 407;
-    const REQUEST_TIMEOUT = 408;
-    const CONFLICT = 409;
-    const GONE = 410;
-    const LENGTH_REQUIRED = 411;
-    const PRECONDITION_FAILED = 412;
-    const PAYLOAD_TOO_LARGE = 413; //'413 Request Entity Too Large';
-    const URI_TOO_LONG = 414; //'414 Request-URI Too Long';
-    const UNSUPPORTED_MEDIA_TYPE = 415;
-    const RANGE_NOT_SATISFIABLE = 416; //'416 Requested Range Not Satisfiable';
-    const EXPECTATION_FAILED = 417;
-    const IM_A_TEAPOT = 418;
-    const MISDIRECT_REQUEST = 421;
-    const UNPROCESSABLE_ENTITY = 422;
-    const LOCKED = 423;
-    const PRECONDITION_REQUIRED = 428;
-    //Server Error 5xx
-    const INTERNAL_SERVER_ERROR = 500;
-    const NOT_IMPLEMENTED = 501;
-    const BAD_GATEWAY = 502;
-    const SERVICE_UNAVAILABLE = 503;
-    const GATEWAY_TIMEOUT = 504;
-    const HTTP_VERSION_NOT_SUPPORTED = 505;
-
     protected static array $messages = array(
             //Informational 1xx
-        self::CONTINUE_ => 'Continue',
-        self::SWITCHING_PROTOCOLS => 'Switching Protocols',
-        self::PROCESSING => 'Processing',
+        HeaderCode::CONTINUE_ => 'Continue',
+        HeaderCode::SWITCHING_PROTOCOLS => 'Switching Protocols',
+        HeaderCode::PROCESSING => 'Processing',
             //Successful 2xx
-        self::OK => 'OK',
-        self::CREATED => 'Created',
-        self::ACCEPTED => 'Accepted',
-        self::NON_AUTHORITATIVE_INFORMATION => 'Non-Authoritative Information',
-        self::NO_CONTENT => 'No Content',
-        self::RESET_CONTENT => 'Reset Content',
-        self::PARTIAL_CONTENT => 'Partial Content',
-        self::MULTI_STATUS => 'Multi-Status',
-        self::ALREADY_REPORTED => 'Already Reported',
-        self::IM_USED => 'IM Used',
+        HeaderCode::OK => 'OK',
+        HeaderCode::CREATED => 'Created',
+        HeaderCode::ACCEPTED => 'Accepted',
+        HeaderCode::NON_AUTHORITATIVE_INFORMATION => 'Non-Authoritative Information',
+        HeaderCode::NO_CONTENT => 'No Content',
+        HeaderCode::RESET_CONTENT => 'Reset Content',
+        HeaderCode::PARTIAL_CONTENT => 'Partial Content',
+        HeaderCode::MULTI_STATUS => 'Multi-Status',
+        HeaderCode::ALREADY_REPORTED => 'Already Reported',
+        HeaderCode::IM_USED => 'IM Used',
             //Redirection 3xx
-        self::MULTIPLE_CHOICES => 'Multiple Choices',
-        self::MOVED_PERMANENTLY => 'Moved Permanently',
-        self::FOUND => 'Found',
-        self::SEE_OTHER => 'See Other',
-        self::NOT_MODIFIED => 'Not Modified',
-        self::USE_PROXY => 'Use Proxy',
+        HeaderCode::MULTIPLE_CHOICES => 'Multiple Choices',
+        HeaderCode::MOVED_PERMANENTLY => 'Moved Permanently',
+        HeaderCode::FOUND => 'Found',
+        HeaderCode::SEE_OTHER => 'See Other',
+        HeaderCode::NOT_MODIFIED => 'Not Modified',
+        HeaderCode::USE_PROXY => 'Use Proxy',
             //        306 => '306 (Unused)',
-        self::TEMPORARY_REDIRECT => 'Temporary Redirect',
-        self::PERMANENT_REDIRECT => 'Permanent Redirect',
+        HeaderCode::TEMPORARY_REDIRECT => 'Temporary Redirect',
+        HeaderCode::PERMANENT_REDIRECT => 'Permanent Redirect',
             //Client Error 4xx
-        self::BAD_REQUEST => 'Bad Request',
-        self::UNAUTHORIZED => 'Unauthorized',
-        self::PAYMENT_REQUIRED => 'Payment Required',
-        self::FORBIDDEN => 'Forbidden',
-        self::NOT_FOUND => 'Not Found',
-        self::METHOHD_NOT_ALLOWED => 'Method Not Allowed',
-        self::NOT_ACCEPTABLE => 'Not Acceptable',
-        self::PROXY_AUTHENTICATION_REQUIRED => 'Proxy Authentication Required',
-        self::REQUEST_TIMEOUT => 'Request Timeout',
-        self::CONFLICT => 'Conflict',
-        self::GONE => 'Gone',
-        self::LENGTH_REQUIRED => 'Length Required',
-        self::PRECONDITION_FAILED => 'Precondition Failed',
-        self::PAYLOAD_TOO_LARGE => 'Payload Too Large',
+        HeaderCode::BAD_REQUEST => 'Bad Request',
+        HeaderCode::UNAUTHORIZED => 'Unauthorized',
+        HeaderCode::PAYMENT_REQUIRED => 'Payment Required',
+        HeaderCode::FORBIDDEN => 'Forbidden',
+        HeaderCode::NOT_FOUND => 'Not Found',
+        HeaderCode::METHOHD_NOT_ALLOWED => 'Method Not Allowed',
+        HeaderCode::NOT_ACCEPTABLE => 'Not Acceptable',
+        HeaderCode::PROXY_AUTHENTICATION_REQUIRED => 'Proxy Authentication Required',
+        HeaderCode::REQUEST_TIMEOUT => 'Request Timeout',
+        HeaderCode::CONFLICT => 'Conflict',
+        HeaderCode::GONE => 'Gone',
+        HeaderCode::LENGTH_REQUIRED => 'Length Required',
+        HeaderCode::PRECONDITION_FAILED => 'Precondition Failed',
+        HeaderCode::PAYLOAD_TOO_LARGE => 'Payload Too Large',
             //'413 Request Entity Too Large',
-        self::URI_TOO_LONG => 'URI Too Long',
+        HeaderCode::URI_TOO_LONG => 'URI Too Long',
             //'414 Request-URI Too Long',
-        self::UNSUPPORTED_MEDIA_TYPE => 'Unsupported Media Type',
-        self::RANGE_NOT_SATISFIABLE => 'Range Not Satisfiable',
+        HeaderCode::UNSUPPORTED_MEDIA_TYPE => 'Unsupported Media Type',
+        HeaderCode::RANGE_NOT_SATISFIABLE => 'Range Not Satisfiable',
             //'416 Requested Range Not Satisfiable',
-        self::EXPECTATION_FAILED => 'Expectation Failed',
-        self::IM_A_TEAPOT => "I'm a teapot",
-        self::MISDIRECT_REQUEST => 'Misdirected Request',
-        self::UNPROCESSABLE_ENTITY => 'Unprocessable Entity',
-        self::LOCKED => 'Locked',
-        self::PRECONDITION_REQUIRED => 'Precondition Required',
+        HeaderCode::EXPECTATION_FAILED => 'Expectation Failed',
+        HeaderCode::IM_A_TEAPOT => "I'm a teapot",
+        HeaderCode::MISDIRECT_REQUEST => 'Misdirected Request',
+        HeaderCode::UNPROCESSABLE_ENTITY => 'Unprocessable Entity',
+        HeaderCode::LOCKED => 'Locked',
+        HeaderCode::PRECONDITION_REQUIRED => 'Precondition Required',
             //Server Error 5xx
-        self::INTERNAL_SERVER_ERROR => 'Internal Server Error',
-        self::NOT_IMPLEMENTED => 'Not Implemented',
-        self::BAD_GATEWAY => 'Bad Gateway',
-        self::SERVICE_UNAVAILABLE => 'Service Unavailable',
-        self::GATEWAY_TIMEOUT => 'Gateway Timeout',
-        self::HTTP_VERSION_NOT_SUPPORTED => 'HTTP Version Not Supported'
+        HeaderCode::INTERNAL_SERVER_ERROR => 'Internal Server Error',
+        HeaderCode::NOT_IMPLEMENTED => 'Not Implemented',
+        HeaderCode::BAD_GATEWAY => 'Bad Gateway',
+        HeaderCode::SERVICE_UNAVAILABLE => 'Service Unavailable',
+        HeaderCode::GATEWAY_TIMEOUT => 'Gateway Timeout',
+        HeaderCode::HTTP_VERSION_NOT_SUPPORTED => 'HTTP Version Not Supported'
     );
 
     public static function send(string $headerValue, bool $replace = true): void
@@ -149,7 +93,7 @@ class Headers
 
     public static function ok(): void
     {
-        self::header(self::OK);
+        self::header(HeaderCode::OK);
     }
 
     /**
@@ -162,13 +106,13 @@ class Headers
         $server_protocol = filter_input(INPUT_SERVER, 'SERVER_PROTOCOL');
         if ($permanent == true) {
             if ($server_protocol == self::$httpVersion) {
-                self::header(self::PERMANENT_REDIRECT);
+                self::header(HeaderCode::PERMANENT_REDIRECT);
             } else {
                 self::send('HTTP/1.0 301 Moved Permanently');
             }
         } else {
             if ($server_protocol == self::$httpVersion) {
-                self::header(self::TEMPORARY_REDIRECT);
+                self::header(HeaderCode::TEMPORARY_REDIRECT);
             } else {
                 self::send('HTTP/1.0 302 Moved Temporarily');
             }
@@ -180,7 +124,7 @@ class Headers
      */
     public static function badRequest(): void
     {
-        self::header(self::BAD_REQUEST);
+        self::header(HeaderCode::BAD_REQUEST);
     }
 
     /**
@@ -188,7 +132,7 @@ class Headers
      */
     public static function unauthorized(): void
     {
-        self::header(self::UNAUTHORIZED);
+        self::header(HeaderCode::UNAUTHORIZED);
     }
 
     /**
@@ -198,7 +142,7 @@ class Headers
     public static function notFound(string $location = ''): void
     {
         if ($location == "")
-            self::header(self::NOT_FOUND);
+            self::header(HeaderCode::NOT_FOUND);
         else
             header("Location: {$location}", true, 404);
     }
