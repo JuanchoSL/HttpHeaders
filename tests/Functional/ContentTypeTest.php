@@ -1,6 +1,6 @@
 <?php
 
-namespace JuanchoSL\HttpHeaders\Tests;
+namespace JuanchoSL\HttpHeaders\Tests\Functional;
 
 use JuanchoSL\HttpHeaders\ContentType;
 use JuanchoSL\HttpHeaders\ExtensionTypes;

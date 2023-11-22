@@ -1,6 +1,6 @@
 <?php
 
-namespace JuanchoSL\HttpHeaders\Tests;
+namespace JuanchoSL\HttpHeaders\Tests\Unit;
 
 use JuanchoSL\HttpHeaders\ExtensionTypes;
 use PHPUnit\Framework\TestCase;
