@@ -54,6 +54,7 @@ class Headers
     const MISDIRECT_REQUEST = 421;
     const UNPROCESSABLE_ENTITY = 422;
     const LOCKED = 423;
+    const PRECONDITION_REQUIRED = 428;
     //Server Error 5xx
     const INTERNAL_SERVER_ERROR = 500;
     const NOT_IMPLEMENTED = 501;
@@ -114,6 +115,7 @@ class Headers
         self::MISDIRECT_REQUEST => 'Misdirected Request',
         self::UNPROCESSABLE_ENTITY => 'Unprocessable Entity',
         self::LOCKED => 'Locked',
+        self::PRECONDITION_REQUIRED => 'Precondition Required',
             //Server Error 5xx
         self::INTERNAL_SERVER_ERROR => 'Internal Server Error',
         self::NOT_IMPLEMENTED => 'Not Implemented',
