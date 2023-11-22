@@ -5,7 +5,7 @@ namespace JuanchoSL\HttpHeaders;
 class HeaderCode
 {
 
-    const CONTINUE_ = 100;
+    const CONTINUE = 100;
     const SWITCHING_PROTOCOLS = 101;
     const PROCESSING = 102;
     //Successful 2xx
