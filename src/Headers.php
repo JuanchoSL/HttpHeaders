@@ -2,71 +2,77 @@
 
 namespace JuanchoSL\HttpHeaders;
 
+use JuanchoSL\HttpHeaders\Constants\Status\Codes;
+use JuanchoSL\HttpHeaders\Constants\Status\Messages;
+
 class Headers
 {
 
     protected static string $httpVersion = 'HTTP/1.1';
 
+    /**
+     * @var array<int,string> $messages
+     */
     protected static array $messages = array(
             //Informational 1xx
-        HeaderCode::CONTINUE => HeaderMessage::CONTINUE,
-        HeaderCode::SWITCHING_PROTOCOLS => HeaderMessage::SWITCHING_PROTOCOLS,
-        HeaderCode::PROCESSING => HeaderMessage::PROCESSING,
+        Codes::CONTINUE => Messages::CONTINUE ,
+        Codes::SWITCHING_PROTOCOLS => Messages::SWITCHING_PROTOCOLS,
+        Codes::PROCESSING => Messages::PROCESSING,
             //Successful 2xx
-        HeaderCode::OK => HeaderMessage::OK,
-        HeaderCode::CREATED => HeaderMessage::CREATED,
-        HeaderCode::ACCEPTED => HeaderMessage::ACCEPTED,
-        HeaderCode::NON_AUTHORITATIVE_INFORMATION => HeaderMessage::NON_AUTHORITATIVE_INFORMATION,
-        HeaderCode::NO_CONTENT => HeaderMessage::NO_CONTENT,
-        HeaderCode::RESET_CONTENT => HeaderMessage::RESET_CONTENT,
-        HeaderCode::PARTIAL_CONTENT => HeaderMessage::PARTIAL_CONTENT,
-        HeaderCode::MULTI_STATUS => HeaderMessage::MULTI_STATUS,
-        HeaderCode::ALREADY_REPORTED => HeaderMessage::ALREADY_REPORTED,
-        HeaderCode::IM_USED => HeaderMessage::IM_USED,
+        Codes::OK => Messages::OK,
+        Codes::CREATED => Messages::CREATED,
+        Codes::ACCEPTED => Messages::ACCEPTED,
+        Codes::NON_AUTHORITATIVE_INFORMATION => Messages::NON_AUTHORITATIVE_INFORMATION,
+        Codes::NO_CONTENT => Messages::NO_CONTENT,
+        Codes::RESET_CONTENT => Messages::RESET_CONTENT,
+        Codes::PARTIAL_CONTENT => Messages::PARTIAL_CONTENT,
+        Codes::MULTI_STATUS => Messages::MULTI_STATUS,
+        Codes::ALREADY_REPORTED => Messages::ALREADY_REPORTED,
+        Codes::IM_USED => Messages::IM_USED,
             //Redirection 3xx
-        HeaderCode::MULTIPLE_CHOICES => HeaderMessage::MULTIPLE_CHOICES,
-        HeaderCode::MOVED_PERMANENTLY => HeaderMessage::MOVED_PERMANENTLY,
-        HeaderCode::FOUND => HeaderMessage::FOUND,
-        HeaderCode::SEE_OTHER => HeaderMessage::SEE_OTHER,
-        HeaderCode::NOT_MODIFIED => HeaderMessage::NOT_MODIFIED,
-        HeaderCode::USE_PROXY => HeaderMessage::USE_PROXY,
+        Codes::MULTIPLE_CHOICES => Messages::MULTIPLE_CHOICES,
+        Codes::MOVED_PERMANENTLY => Messages::MOVED_PERMANENTLY,
+        Codes::FOUND => Messages::FOUND,
+        Codes::SEE_OTHER => Messages::SEE_OTHER,
+        Codes::NOT_MODIFIED => Messages::NOT_MODIFIED,
+        Codes::USE_PROXY => Messages::USE_PROXY,
             //        306 => '306 (Unused)',
-        HeaderCode::TEMPORARY_REDIRECT => HeaderMessage::TEMPORARY_REDIRECT,
-        HeaderCode::PERMANENT_REDIRECT => HeaderMessage::PERMANENT_REDIRECT,
+        Codes::TEMPORARY_REDIRECT => Messages::TEMPORARY_REDIRECT,
+        Codes::PERMANENT_REDIRECT => Messages::PERMANENT_REDIRECT,
             //Client Error 4xx
-        HeaderCode::BAD_REQUEST => HeaderMessage::BAD_REQUEST,
-        HeaderCode::UNAUTHORIZED => HeaderMessage::UNAUTHORIZED,
-        HeaderCode::PAYMENT_REQUIRED => HeaderMessage::PAYMENT_REQUIRED,
-        HeaderCode::FORBIDDEN => HeaderMessage::FORBIDDEN,
-        HeaderCode::NOT_FOUND => HeaderMessage::NOT_FOUND,
-        HeaderCode::METHOHD_NOT_ALLOWED => HeaderMessage::METHOHD_NOT_ALLOWED,
-        HeaderCode::NOT_ACCEPTABLE => HeaderMessage::NOT_ACCEPTABLE,
-        HeaderCode::PROXY_AUTHENTICATION_REQUIRED => HeaderMessage::PROXY_AUTHENTICATION_REQUIRED,
-        HeaderCode::REQUEST_TIMEOUT => HeaderMessage::REQUEST_TIMEOUT,
-        HeaderCode::CONFLICT => HeaderMessage::CONFLICT,
-        HeaderCode::GONE => HeaderMessage::GONE,
-        HeaderCode::LENGTH_REQUIRED => HeaderMessage::LENGTH_REQUIRED,
-        HeaderCode::PRECONDITION_FAILED => HeaderMessage::PRECONDITION_FAILED,
-        HeaderCode::PAYLOAD_TOO_LARGE => HeaderMessage::PAYLOAD_TOO_LARGE,
+        Codes::BAD_REQUEST => Messages::BAD_REQUEST,
+        Codes::UNAUTHORIZED => Messages::UNAUTHORIZED,
+        Codes::PAYMENT_REQUIRED => Messages::PAYMENT_REQUIRED,
+        Codes::FORBIDDEN => Messages::FORBIDDEN,
+        Codes::NOT_FOUND => Messages::NOT_FOUND,
+        Codes::METHOD_NOT_ALLOWED => Messages::METHOD_NOT_ALLOWED,
+        Codes::NOT_ACCEPTABLE => Messages::NOT_ACCEPTABLE,
+        Codes::PROXY_AUTHENTICATION_REQUIRED => Messages::PROXY_AUTHENTICATION_REQUIRED,
+        Codes::REQUEST_TIMEOUT => Messages::REQUEST_TIMEOUT,
+        Codes::CONFLICT => Messages::CONFLICT,
+        Codes::GONE => Messages::GONE,
+        Codes::LENGTH_REQUIRED => Messages::LENGTH_REQUIRED,
+        Codes::PRECONDITION_FAILED => Messages::PRECONDITION_FAILED,
+        Codes::PAYLOAD_TOO_LARGE => Messages::PAYLOAD_TOO_LARGE,
             //'413 Request Entity Too Large',
-        HeaderCode::URI_TOO_LONG => HeaderMessage::URI_TOO_LONG,
+        Codes::URI_TOO_LONG => Messages::URI_TOO_LONG,
             //'414 Request-URI Too Long',
-        HeaderCode::UNSUPPORTED_MEDIA_TYPE => HeaderMessage::UNSUPPORTED_MEDIA_TYPE,
-        HeaderCode::RANGE_NOT_SATISFIABLE => HeaderMessage::RANGE_NOT_SATISFIABLE,
+        Codes::UNSUPPORTED_MEDIA_TYPE => Messages::UNSUPPORTED_MEDIA_TYPE,
+        Codes::RANGE_NOT_SATISFIABLE => Messages::RANGE_NOT_SATISFIABLE,
             //'416 Requested Range Not Satisfiable',
-        HeaderCode::EXPECTATION_FAILED => HeaderMessage::EXPECTATION_FAILED,
-        HeaderCode::IM_A_TEAPOT => HeaderMessage::IM_A_TEAPOT,
-        HeaderCode::MISDIRECT_REQUEST => HeaderMessage::MISDIRECT_REQUEST,
-        HeaderCode::UNPROCESSABLE_ENTITY => HeaderMessage::UNPROCESSABLE_ENTITY,
-        HeaderCode::LOCKED => HeaderMessage::LOCKED,
-        HeaderCode::PRECONDITION_REQUIRED => HeaderMessage::PRECONDITION_REQUIRED,
+        Codes::EXPECTATION_FAILED => Messages::EXPECTATION_FAILED,
+        Codes::IM_A_TEAPOT => Messages::IM_A_TEAPOT,
+        Codes::MISDIRECT_REQUEST => Messages::MISDIRECT_REQUEST,
+        Codes::UNPROCESSABLE_ENTITY => Messages::UNPROCESSABLE_ENTITY,
+        Codes::LOCKED => Messages::LOCKED,
+        Codes::PRECONDITION_REQUIRED => Messages::PRECONDITION_REQUIRED,
             //Server Error 5xx
-        HeaderCode::INTERNAL_SERVER_ERROR => HeaderMessage::INTERNAL_SERVER_ERROR,
-        HeaderCode::NOT_IMPLEMENTED => HeaderMessage::NOT_IMPLEMENTED,
-        HeaderCode::BAD_GATEWAY => HeaderMessage::BAD_GATEWAY,
-        HeaderCode::SERVICE_UNAVAILABLE => HeaderMessage::SERVICE_UNAVAILABLE,
-        HeaderCode::GATEWAY_TIMEOUT => HeaderMessage::GATEWAY_TIMEOUT,
-        HeaderCode::HTTP_VERSION_NOT_SUPPORTED => HeaderMessage::HTTP_VERSION_NOT_SUPPORTED
+        Codes::INTERNAL_SERVER_ERROR => Messages::INTERNAL_SERVER_ERROR,
+        Codes::NOT_IMPLEMENTED => Messages::NOT_IMPLEMENTED,
+        Codes::BAD_GATEWAY => Messages::BAD_GATEWAY,
+        Codes::SERVICE_UNAVAILABLE => Messages::SERVICE_UNAVAILABLE,
+        Codes::GATEWAY_TIMEOUT => Messages::GATEWAY_TIMEOUT,
+        Codes::HTTP_VERSION_NOT_SUPPORTED => Messages::HTTP_VERSION_NOT_SUPPORTED
     );
 
     public static function send(string $headerValue, bool $replace = true): void
@@ -93,7 +99,7 @@ class Headers
 
     public static function ok(): void
     {
-        self::header(HeaderCode::OK);
+        self::header(Codes::OK);
     }
 
     /**
@@ -106,13 +112,13 @@ class Headers
         $server_protocol = filter_input(INPUT_SERVER, 'SERVER_PROTOCOL');
         if ($permanent == true) {
             if ($server_protocol == self::$httpVersion) {
-                self::header(HeaderCode::PERMANENT_REDIRECT);
+                self::header(Codes::PERMANENT_REDIRECT);
             } else {
                 self::send('HTTP/1.0 301 Moved Permanently');
             }
         } else {
             if ($server_protocol == self::$httpVersion) {
-                self::header(HeaderCode::TEMPORARY_REDIRECT);
+                self::header(Codes::TEMPORARY_REDIRECT);
             } else {
                 self::send('HTTP/1.0 302 Moved Temporarily');
             }
@@ -124,7 +130,7 @@ class Headers
      */
     public static function badRequest(): void
     {
-        self::header(HeaderCode::BAD_REQUEST);
+        self::header(Codes::BAD_REQUEST);
     }
 
     /**
@@ -132,7 +138,7 @@ class Headers
      */
     public static function unauthorized(): void
     {
-        self::header(HeaderCode::UNAUTHORIZED);
+        self::header(Codes::UNAUTHORIZED);
     }
 
     /**
@@ -142,7 +148,7 @@ class Headers
     public static function notFound(string $location = ''): void
     {
         if ($location == "")
-            self::header(HeaderCode::NOT_FOUND);
+            self::header(Codes::NOT_FOUND);
         else
             header("Location: {$location}", true, 404);
     }
@@ -288,7 +294,7 @@ class Headers
 
     /**
      * Concatena varias cabeceras para ser devueltas
-     * @param array $headers Cabeceras a concatenar
+     * @param array<int,string> $headers Cabeceras a concatenar
      * @return string Cabeceras
      */
     public static function mountArray(array $headers): ?string
@@ -311,7 +317,7 @@ class Headers
 
     /**
      * Lista de cabeceras enviadas
-     * @return array Cabeceras enviadas
+     * @return array<int,string> Cabeceras enviadas
      */
     public static function enum(): array
     {

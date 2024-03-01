@@ -2,7 +2,7 @@
 
 namespace JuanchoSL\HttpHeaders\Tests\Unit;
 
-use JuanchoSL\HttpHeaders\ExtensionTypes;
+use JuanchoSL\HttpHeaders\Constants\Types\Extensions;
 use PHPUnit\Framework\TestCase;
 
 
@@ -10,150 +10,150 @@ class ExtensionTypeTest extends TestCase
 {
     public function testExtensionJs()
     {
-        $this->assertEquals('js', ExtensionTypes::TYPE_EXTENSION_JS);
+        $this->assertEquals('js', Extensions::JS);
     }
     public function testExtensionXls()
     {
-        $this->assertEquals('xls', ExtensionTypes::TYPE_EXTENSION_XLS);
+        $this->assertEquals('xls', Extensions::XLS);
     }
     public function testExtensionXlsx()
     {
-        $this->assertEquals('xlsx', ExtensionTypes::TYPE_EXTENSION_XLSX);
+        $this->assertEquals('xlsx', Extensions::XLSX);
     }
     public function testExtensionDoc()
     {
-        $this->assertEquals('doc', ExtensionTypes::TYPE_EXTENSION_DOC);
+        $this->assertEquals('doc', Extensions::DOC);
     }
     public function testExtensionDocx()
     {
-        $this->assertEquals('docx', ExtensionTypes::TYPE_EXTENSION_DOCX);
+        $this->assertEquals('docx', Extensions::DOCX);
     }
     public function testExtensionPpt()
     {
-        $this->assertEquals('ppt', ExtensionTypes::TYPE_EXTENSION_PPT);
+        $this->assertEquals('ppt', Extensions::PPT);
     }
     public function testExtensionPptx()
     {
-        $this->assertEquals('pptx', ExtensionTypes::TYPE_EXTENSION_PPTX);
+        $this->assertEquals('pptx', Extensions::PPTX);
     }
     public function testExtensionCsv()
     {
-        $this->assertEquals('csv', ExtensionTypes::TYPE_EXTENSION_CSV);
+        $this->assertEquals('csv', Extensions::CSV);
     }
     public function testExtensionPdf()
     {
-        $this->assertEquals('pdf', ExtensionTypes::TYPE_EXTENSION_PDF);
+        $this->assertEquals('pdf', Extensions::PDF);
     }
     public function testExtensionJson()
     {
-        $this->assertEquals('json', ExtensionTypes::TYPE_EXTENSION_JSON);
+        $this->assertEquals('json', Extensions::JSON);
     }
     public function testExtensionXml()
     {
-        $this->assertEquals('xml', ExtensionTypes::TYPE_EXTENSION_XML);
+        $this->assertEquals('xml', Extensions::XML);
     }
     public function testExtensionHtm()
     {
-        $this->assertEquals('htm', ExtensionTypes::TYPE_EXTENSION_HTM);
+        $this->assertEquals('htm', Extensions::HTM);
     }
     public function testExtensionHtml()
     {
-        $this->assertEquals('html', ExtensionTypes::TYPE_EXTENSION_HTML);
+        $this->assertEquals('html', Extensions::HTML);
     }
     public function testExtensionTxt()
     {
-        $this->assertEquals('txt', ExtensionTypes::TYPE_EXTENSION_TXT);
+        $this->assertEquals('txt', Extensions::TXT);
     }
     public function testExtensionPlain()
     {
-        $this->assertEquals('plain', ExtensionTypes::TYPE_EXTENSION_PLAIN);
+        $this->assertEquals('plain', Extensions::PLAIN);
     }
     public function testExtensionCss()
     {
-        $this->assertEquals('css', ExtensionTypes::TYPE_EXTENSION_CSS);
+        $this->assertEquals('css', Extensions::CSS);
     }
     public function testExtensionJpg()
     {
-        $this->assertEquals('jpg', ExtensionTypes::TYPE_EXTENSION_JPG);
+        $this->assertEquals('jpg', Extensions::JPG);
     }
     public function testExtensionJpeg()
     {
-        $this->assertEquals('jpeg', ExtensionTypes::TYPE_EXTENSION_JPEG);
+        $this->assertEquals('jpeg', Extensions::JPEG);
     }
     public function testExtensionPng()
     {
-        $this->assertEquals('png', ExtensionTypes::TYPE_EXTENSION_PNG);
+        $this->assertEquals('png', Extensions::PNG);
     }
     public function testExtensionBmp()
     {
-        $this->assertEquals('bmp', ExtensionTypes::TYPE_EXTENSION_BMP);
+        $this->assertEquals('bmp', Extensions::BMP);
     }
     public function testExtensionWebp()
     {
-        $this->assertEquals('webp', ExtensionTypes::TYPE_EXTENSION_WEBP);
+        $this->assertEquals('webp', Extensions::WEBP);
     }
     public function testExtensionGif()
     {
-        $this->assertEquals('gif', ExtensionTypes::TYPE_EXTENSION_GIF);
+        $this->assertEquals('gif', Extensions::GIF);
     }
     public function testExtensionIco()
     {
-        $this->assertEquals('ico', ExtensionTypes::TYPE_EXTENSION_ICO);
+        $this->assertEquals('ico', Extensions::ICO);
     }
     public function testExtensionMpg()
     {
-        $this->assertEquals('mpg', ExtensionTypes::TYPE_EXTENSION_MPG);
+        $this->assertEquals('mpg', Extensions::MPG);
     }
     public function testExtensionMpeg()
     {
-        $this->assertEquals('mpeg', ExtensionTypes::TYPE_EXTENSION_MPEG);
+        $this->assertEquals('mpeg', Extensions::MPEG);
     }
     public function testExtensionAvi()
     {
-        $this->assertEquals('avi', ExtensionTypes::TYPE_EXTENSION_AVI);
+        $this->assertEquals('avi', Extensions::AVI);
     }
     public function testExtensionMp4()
     {
-        $this->assertEquals('mp4', ExtensionTypes::TYPE_EXTENSION_MP4);
+        $this->assertEquals('mp4', Extensions::MP4);
     }
     public function testExtensionEot()
     {
-        $this->assertEquals('eot', ExtensionTypes::TYPE_EXTENSION_EOT);
+        $this->assertEquals('eot', Extensions::EOT);
     }
     public function testExtensionTtf()
     {
-        $this->assertEquals('ttf', ExtensionTypes::TYPE_EXTENSION_TTF);
+        $this->assertEquals('ttf', Extensions::TTF);
     }
     public function testExtensionWoff()
     {
-        $this->assertEquals('woff', ExtensionTypes::TYPE_EXTENSION_WOFF);
+        $this->assertEquals('woff', Extensions::WOFF);
     }
     public function testExtensionWoff2()
     {
-        $this->assertEquals('woff2', ExtensionTypes::TYPE_EXTENSION_WOFF2);
+        $this->assertEquals('woff2', Extensions::WOFF2);
     }
     public function testExtensionOtf()
     {
-        $this->assertEquals('otf', ExtensionTypes::TYPE_EXTENSION_OTF);
+        $this->assertEquals('otf', Extensions::OTF);
     }
     public function testExtensionApk()
     {
-        $this->assertEquals('apk', ExtensionTypes::TYPE_EXTENSION_APK);
+        $this->assertEquals('apk', Extensions::APK);
     }
     public function testExtensionExe()
     {
-        $this->assertEquals('exe', ExtensionTypes::TYPE_EXTENSION_EXE);
+        $this->assertEquals('exe', Extensions::EXE);
     }
     public function testExtensionZip()
     {
-        $this->assertEquals('zip', ExtensionTypes::TYPE_EXTENSION_ZIP);
+        $this->assertEquals('zip', Extensions::ZIP);
     }
     public function testExtensionRar()
     {
-        $this->assertEquals('rar', ExtensionTypes::TYPE_EXTENSION_RAR);
+        $this->assertEquals('rar', Extensions::RAR);
     }
     public function testExtensionSvg()
     {
-        $this->assertEquals('svg', ExtensionTypes::TYPE_EXTENSION_SVG);
+        $this->assertEquals('svg', Extensions::SVG);
     }
 }

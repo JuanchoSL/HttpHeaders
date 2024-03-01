@@ -2,256 +2,256 @@
 
 namespace JuanchoSL\HttpHeaders\Tests\Unit;
 
-use JuanchoSL\HttpHeaders\HeaderCode;
+use JuanchoSL\HttpHeaders\Constants\Status\Codes;
 use PHPUnit\Framework\TestCase;
 
 
 class CodeTest extends TestCase
 {
 
-    public function testExtensionCONTINUE()
+    public function testCodeCONTINUE()
     {
-        $this->assertEquals(100, HeaderCode::CONTINUE );
+        $this->assertEquals(100, Codes::CONTINUE );
     }
 
-    public function testExtensionSWITCHING_PROTOCOLS()
+    public function testCodeSWITCHING_PROTOCOLS()
     {
-        $this->assertEquals(101, HeaderCode::SWITCHING_PROTOCOLS);
+        $this->assertEquals(101, Codes::SWITCHING_PROTOCOLS);
     }
 
-    public function testExtensionPROCESSING()
+    public function testCodePROCESSING()
     {
-        $this->assertEquals(102, HeaderCode::PROCESSING);
+        $this->assertEquals(102, Codes::PROCESSING);
     }
 
-    public function testExtensionOK()
+    public function testCodeOK()
     {
-        $this->assertEquals(200, HeaderCode::OK);
+        $this->assertEquals(200, Codes::OK);
     }
 
-    public function testExtensionCREATED()
+    public function testCodeCREATED()
     {
-        $this->assertEquals(201, HeaderCode::CREATED);
+        $this->assertEquals(201, Codes::CREATED);
     }
 
-    public function testExtensionACCEPTED()
+    public function testCodeACCEPTED()
     {
-        $this->assertEquals(202, HeaderCode::ACCEPTED);
+        $this->assertEquals(202, Codes::ACCEPTED);
     }
 
-    public function testExtensionNON_AUTHORITATIVE_INFORMATION()
+    public function testCodeNON_AUTHORITATIVE_INFORMATION()
     {
-        $this->assertEquals(203, HeaderCode::NON_AUTHORITATIVE_INFORMATION);
+        $this->assertEquals(203, Codes::NON_AUTHORITATIVE_INFORMATION);
     }
 
-    public function testExtensionNO_CONTENT()
+    public function testCodeNO_CONTENT()
     {
-        $this->assertEquals(204, HeaderCode::NO_CONTENT);
+        $this->assertEquals(204, Codes::NO_CONTENT);
     }
 
-    public function testExtensionRESET_CONTENT()
+    public function testCodeRESET_CONTENT()
     {
-        $this->assertEquals(205, HeaderCode::RESET_CONTENT);
+        $this->assertEquals(205, Codes::RESET_CONTENT);
     }
 
-    public function testExtensionPARTIAL_CONTENT()
+    public function testCodePARTIAL_CONTENT()
     {
-        $this->assertEquals(206, HeaderCode::PARTIAL_CONTENT);
+        $this->assertEquals(206, Codes::PARTIAL_CONTENT);
     }
 
-    public function testExtensionMULTI_STATUS()
+    public function testCodeMULTI_STATUS()
     {
-        $this->assertEquals(207, HeaderCode::MULTI_STATUS);
+        $this->assertEquals(207, Codes::MULTI_STATUS);
     }
 
-    public function testExtensionALREADY_REPORTED()
+    public function testCodeALREADY_REPORTED()
     {
-        $this->assertEquals(208, HeaderCode::ALREADY_REPORTED);
+        $this->assertEquals(208, Codes::ALREADY_REPORTED);
     }
 
-    public function testExtensionIM_USED()
+    public function testCodeIM_USED()
     {
-        $this->assertEquals(226, HeaderCode::IM_USED);
+        $this->assertEquals(226, Codes::IM_USED);
     }
 
     //Redirection 3xx
-    public function testExtensionMULTIPLE_CHOICES()
+    public function testCodeMULTIPLE_CHOICES()
     {
-        $this->assertEquals(300, HeaderCode::MULTIPLE_CHOICES);
+        $this->assertEquals(300, Codes::MULTIPLE_CHOICES);
     }
 
-    public function testExtensionMOVED_PERMANENTLY()
+    public function testCodeMOVED_PERMANENTLY()
     {
-        $this->assertEquals(301, HeaderCode::MOVED_PERMANENTLY);
+        $this->assertEquals(301, Codes::MOVED_PERMANENTLY);
     }
 
-    public function testExtensionFOUND()
+    public function testCodeFOUND()
     {
-        $this->assertEquals(302, HeaderCode::FOUND);
+        $this->assertEquals(302, Codes::FOUND);
     }
 
-    public function testExtensionSEE_OTHER()
+    public function testCodeSEE_OTHER()
     {
-        $this->assertEquals(303, HeaderCode::SEE_OTHER);
+        $this->assertEquals(303, Codes::SEE_OTHER);
     }
 
-    public function testExtensionNOT_MODIFIED()
+    public function testCodeNOT_MODIFIED()
     {
-        $this->assertEquals(304, HeaderCode::NOT_MODIFIED);
+        $this->assertEquals(304, Codes::NOT_MODIFIED);
     }
 
-    public function testExtensionUSE_PROXY()
+    public function testCodeUSE_PROXY()
     {
-        $this->assertEquals(305, HeaderCode::USE_PROXY);
+        $this->assertEquals(305, Codes::USE_PROXY);
     }
 
-    public function testExtensionTEMPORARY_REDIRECT()
+    public function testCodeTEMPORARY_REDIRECT()
     {
-        $this->assertEquals(307, HeaderCode::TEMPORARY_REDIRECT);
+        $this->assertEquals(307, Codes::TEMPORARY_REDIRECT);
     }
 
-    public function testExtensionPERMANENT_REDIRECT()
+    public function testCodePERMANENT_REDIRECT()
     {
-        $this->assertEquals(308, HeaderCode::PERMANENT_REDIRECT);
+        $this->assertEquals(308, Codes::PERMANENT_REDIRECT);
     }
 
-    public function testExtensionBAD_REQUEST()
+    public function testCodeBAD_REQUEST()
     {
-        $this->assertEquals(400, HeaderCode::BAD_REQUEST);
+        $this->assertEquals(400, Codes::BAD_REQUEST);
     }
 
-    public function testExtensionUNAUTHORIZED()
+    public function testCodeUNAUTHORIZED()
     {
-        $this->assertEquals(401, HeaderCode::UNAUTHORIZED);
+        $this->assertEquals(401, Codes::UNAUTHORIZED);
     }
 
-    public function testExtensionPAYMENT_REQUIRED()
+    public function testCodePAYMENT_REQUIRED()
     {
-        $this->assertEquals(402, HeaderCode::PAYMENT_REQUIRED);
+        $this->assertEquals(402, Codes::PAYMENT_REQUIRED);
     }
 
-    public function testExtensionFORBIDDEN()
+    public function testCodeFORBIDDEN()
     {
-        $this->assertEquals(403, HeaderCode::FORBIDDEN);
+        $this->assertEquals(403, Codes::FORBIDDEN);
     }
 
-    public function testExtensionNOT_FOUND()
+    public function testCodeNOT_FOUND()
     {
-        $this->assertEquals(404, HeaderCode::NOT_FOUND);
+        $this->assertEquals(404, Codes::NOT_FOUND);
     }
 
-    public function testExtensionMETHOHD_NOT_ALLOWED()
+    public function testCodeMETHOD_NOT_ALLOWED()
     {
-        $this->assertEquals(405, HeaderCode::METHOHD_NOT_ALLOWED);
+        $this->assertEquals(405, Codes::METHOD_NOT_ALLOWED);
     }
 
-    public function testExtensionNOT_ACCEPTABLE()
+    public function testCodeNOT_ACCEPTABLE()
     {
-        $this->assertEquals(406, HeaderCode::NOT_ACCEPTABLE);
+        $this->assertEquals(406, Codes::NOT_ACCEPTABLE);
     }
 
-    public function testExtensionPROXY_AUTHENTICATION_REQUIRED()
+    public function testCodePROXY_AUTHENTICATION_REQUIRED()
     {
-        $this->assertEquals(407, HeaderCode::PROXY_AUTHENTICATION_REQUIRED);
+        $this->assertEquals(407, Codes::PROXY_AUTHENTICATION_REQUIRED);
     }
 
-    public function testExtensionREQUEST_TIMEOUT()
+    public function testCodeREQUEST_TIMEOUT()
     {
-        $this->assertEquals(408, HeaderCode::REQUEST_TIMEOUT);
+        $this->assertEquals(408, Codes::REQUEST_TIMEOUT);
     }
 
-    public function testExtensionCONFLICT()
+    public function testCodeCONFLICT()
     {
-        $this->assertEquals(409, HeaderCode::CONFLICT);
+        $this->assertEquals(409, Codes::CONFLICT);
     }
 
-    public function testExtensionGONE()
+    public function testCodeGONE()
     {
-        $this->assertEquals(410, HeaderCode::GONE);
+        $this->assertEquals(410, Codes::GONE);
     }
 
-    public function testExtensionLENGTH_REQUIRED()
+    public function testCodeLENGTH_REQUIRED()
     {
-        $this->assertEquals(411, HeaderCode::LENGTH_REQUIRED);
+        $this->assertEquals(411, Codes::LENGTH_REQUIRED);
     }
 
-    public function testExtensionPRECONDITION_FAILED()
+    public function testCodePRECONDITION_FAILED()
     {
-        $this->assertEquals(412, HeaderCode::PRECONDITION_FAILED);
+        $this->assertEquals(412, Codes::PRECONDITION_FAILED);
     }
 
-    public function testExtensionPAYLOAD_TOO_LARGE()
+    public function testCodePAYLOAD_TOO_LARGE()
     {
-        $this->assertEquals(413, HeaderCode::PAYLOAD_TOO_LARGE);
+        $this->assertEquals(413, Codes::PAYLOAD_TOO_LARGE);
     }
 
-    public function testExtensionURI_TOO_LONG()
+    public function testCodeURI_TOO_LONG()
     {
-        $this->assertEquals(414, HeaderCode::URI_TOO_LONG);
+        $this->assertEquals(414, Codes::URI_TOO_LONG);
     }
 
-    public function testExtensionUNSUPPORTED_MEDIA_TYPE()
+    public function testCodeUNSUPPORTED_MEDIA_TYPE()
     {
-        $this->assertEquals(415, HeaderCode::UNSUPPORTED_MEDIA_TYPE);
+        $this->assertEquals(415, Codes::UNSUPPORTED_MEDIA_TYPE);
     }
 
-    public function testExtensionRANGE_NOT_SATISFIABLE()
+    public function testCodeRANGE_NOT_SATISFIABLE()
     {
-        $this->assertEquals(416, HeaderCode::RANGE_NOT_SATISFIABLE);
+        $this->assertEquals(416, Codes::RANGE_NOT_SATISFIABLE);
     }
 
-    public function testExtensionEXPECTATION_FAILED()
+    public function testCodeEXPECTATION_FAILED()
     {
-        $this->assertEquals(417, HeaderCode::EXPECTATION_FAILED);
+        $this->assertEquals(417, Codes::EXPECTATION_FAILED);
     }
 
-    public function testExtensionIM_A_TEAPOT()
+    public function testCodeIM_A_TEAPOT()
     {
-        $this->assertEquals(418, HeaderCode::IM_A_TEAPOT);
+        $this->assertEquals(418, Codes::IM_A_TEAPOT);
     }
 
-    public function testExtensionMISDIRECT_REQUEST()
+    public function testCodeMISDIRECT_REQUEST()
     {
-        $this->assertEquals(421, HeaderCode::MISDIRECT_REQUEST);
+        $this->assertEquals(421, Codes::MISDIRECT_REQUEST);
     }
 
-    public function testExtensionUNPROCESSABLE_ENTITY()
+    public function testCodeUNPROCESSABLE_ENTITY()
     {
-        $this->assertEquals(422, HeaderCode::UNPROCESSABLE_ENTITY);
+        $this->assertEquals(422, Codes::UNPROCESSABLE_ENTITY);
     }
 
-    public function testExtensionLOCKED()
+    public function testCodeLOCKED()
     {
-        $this->assertEquals(423, HeaderCode::LOCKED);
+        $this->assertEquals(423, Codes::LOCKED);
     }
 
-    public function testExtensionPRECONDITION_REQUIRED()
+    public function testCodePRECONDITION_REQUIRED()
     {
-        $this->assertEquals(428, HeaderCode::PRECONDITION_REQUIRED);
+        $this->assertEquals(428, Codes::PRECONDITION_REQUIRED);
     }
 
-    public function testExtensionINTERNAL_SERVER_ERROR()
+    public function testCodeINTERNAL_SERVER_ERROR()
     {
-        $this->assertEquals(500, HeaderCode::INTERNAL_SERVER_ERROR);
+        $this->assertEquals(500, Codes::INTERNAL_SERVER_ERROR);
     }
-    public function testExtensionNOT_IMPLEMENTED()
+    public function testCodeNOT_IMPLEMENTED()
     {
-        $this->assertEquals(501, HeaderCode::NOT_IMPLEMENTED);
+        $this->assertEquals(501, Codes::NOT_IMPLEMENTED);
     }
-    public function testExtensionBAD_GATEWAY()
+    public function testCodeBAD_GATEWAY()
     {
-        $this->assertEquals(502, HeaderCode::BAD_GATEWAY);
+        $this->assertEquals(502, Codes::BAD_GATEWAY);
     }
-    public function testExtensionSERVICE_UNAVAILABLE()
+    public function testCodeSERVICE_UNAVAILABLE()
     {
-        $this->assertEquals(503, HeaderCode::SERVICE_UNAVAILABLE);
+        $this->assertEquals(503, Codes::SERVICE_UNAVAILABLE);
     }
-    public function testExtensionGATEWAY_TIMEOUT()
+    public function testCodeGATEWAY_TIMEOUT()
     {
-        $this->assertEquals(504, HeaderCode::GATEWAY_TIMEOUT);
+        $this->assertEquals(504, Codes::GATEWAY_TIMEOUT);
     }
-    public function testExtensionHTTP_VERSION_NOT_SUPPORTED()
+    public function testCodeHTTP_VERSION_NOT_SUPPORTED()
     {
-        $this->assertEquals(505, HeaderCode::HTTP_VERSION_NOT_SUPPORTED);
+        $this->assertEquals(505, Codes::HTTP_VERSION_NOT_SUPPORTED);
     }
 }

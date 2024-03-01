@@ -2,256 +2,357 @@
 
 namespace JuanchoSL\HttpHeaders\Tests\Functional;
 
-use JuanchoSL\HttpHeaders\HeaderCode;
+use JuanchoSL\HttpHeaders\Constants\Status\Codes;
+use JuanchoSL\HttpHeaders\Constants\Status\Messages;
 use PHPUnit\Framework\TestCase;
 use JuanchoSL\HttpHeaders\Headers;
 
 class HeadersTest extends TestCase
 {
 
-    public function testExtensionCONTINUE()
+    public function testMessageCONTINUE()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::CONTINUE));
+        $message = Headers::getMessage(Codes::CONTINUE );
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::CONTINUE , $message);
     }
 
-    public function testExtensionSWITCHING_PROTOCOLS()
+    public function testMessageSWITCHING_PROTOCOLS()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::SWITCHING_PROTOCOLS));
+        $message = Headers::getMessage(Codes::SWITCHING_PROTOCOLS);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::SWITCHING_PROTOCOLS, $message);
     }
 
-    public function testExtensionPROCESSING()
+    public function testMessagePROCESSING()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::PROCESSING));
+        $message = Headers::getMessage(Codes::PROCESSING);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::PROCESSING, $message);
     }
 
-    public function testExtensionOK()
+    public function testMessageOK()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::OK));
+        $message = Headers::getMessage(Codes::OK);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::OK, $message);
     }
 
-    public function testExtensionCREATED()
+    public function testMessageCREATED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::CREATED));
+        $message = Headers::getMessage(Codes::CREATED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::CREATED, $message);
     }
 
-    public function testExtensionACCEPTED()
+    public function testMessageACCEPTED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::ACCEPTED));
+        $message = Headers::getMessage(Codes::ACCEPTED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::ACCEPTED, $message);
     }
 
-    public function testExtensionNON_AUTHORITATIVE_INFORMATION()
+    public function testMessageNON_AUTHORITATIVE_INFORMATION()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::NON_AUTHORITATIVE_INFORMATION));
+        $message = Headers::getMessage(Codes::NON_AUTHORITATIVE_INFORMATION);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::NON_AUTHORITATIVE_INFORMATION, $message);
     }
 
-    public function testExtensionNO_CONTENT()
+    public function testMessageNO_CONTENT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::NO_CONTENT));
+        $message = Headers::getMessage(Codes::NO_CONTENT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::NO_CONTENT, $message);
     }
 
-    public function testExtensionRESET_CONTENT()
+    public function testMessageRESET_CONTENT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::RESET_CONTENT));
+        $message = Headers::getMessage(Codes::RESET_CONTENT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::RESET_CONTENT, $message);
     }
 
-    public function testExtensionPARTIAL_CONTENT()
+    public function testMessagePARTIAL_CONTENT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::PARTIAL_CONTENT));
+        $message = Headers::getMessage(Codes::PARTIAL_CONTENT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::PARTIAL_CONTENT, $message);
     }
 
-    public function testExtensionMULTI_STATUS()
+    public function testMessageMULTI_STATUS()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::MULTI_STATUS));
+        $message = Headers::getMessage(Codes::MULTI_STATUS);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::MULTI_STATUS, $message);
     }
 
-    public function testExtensionALREADY_REPORTED()
+    public function testMessageALREADY_REPORTED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::ALREADY_REPORTED));
+        $message = Headers::getMessage(Codes::ALREADY_REPORTED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::ALREADY_REPORTED, $message);
     }
 
-    public function testExtensionIM_USED()
+    public function testMessageIM_USED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::IM_USED));
+        $message = Headers::getMessage(Codes::IM_USED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::IM_USED, $message);
     }
 
     //Redirection 3xx
-    public function testExtensionMULTIPLE_CHOICES()
+    public function testMessageMULTIPLE_CHOICES()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::MULTIPLE_CHOICES));
+        $message = Headers::getMessage(Codes::MULTIPLE_CHOICES);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::MULTIPLE_CHOICES, $message);
     }
 
-    public function testExtensionMOVED_PERMANENTLY()
+    public function testMessageMOVED_PERMANENTLY()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::MOVED_PERMANENTLY));
+        $message = Headers::getMessage(Codes::MOVED_PERMANENTLY);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::MOVED_PERMANENTLY, $message);
     }
 
-    public function testExtensionFOUND()
+    public function testMessageFOUND()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::FOUND));
+        $message = Headers::getMessage(Codes::FOUND);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::FOUND, $message);
     }
 
-    public function testExtensionSEE_OTHER()
+    public function testMessageSEE_OTHER()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::SEE_OTHER));
+        $message = Headers::getMessage(Codes::SEE_OTHER);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::SEE_OTHER, $message);
     }
 
-    public function testExtensionNOT_MODIFIED()
+    public function testMessageNOT_MODIFIED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::NOT_MODIFIED));
+        $message = Headers::getMessage(Codes::NOT_MODIFIED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::NOT_MODIFIED, $message);
     }
 
-    public function testExtensionUSE_PROXY()
+    public function testMessageUSE_PROXY()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::USE_PROXY));
+        $message = Headers::getMessage(Codes::USE_PROXY);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::USE_PROXY, $message);
     }
 
-    public function testExtensionTEMPORARY_REDIRECT()
+    public function testMessageTEMPORARY_REDIRECT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::TEMPORARY_REDIRECT));
+        $message = Headers::getMessage(Codes::TEMPORARY_REDIRECT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::TEMPORARY_REDIRECT, $message);
     }
 
-    public function testExtensionPERMANENT_REDIRECT()
+    public function testMessagePERMANENT_REDIRECT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::PERMANENT_REDIRECT));
+        $message = Headers::getMessage(Codes::PERMANENT_REDIRECT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::PERMANENT_REDIRECT, $message);
     }
 
-    public function testExtensionBAD_REQUEST()
+    public function testMessageBAD_REQUEST()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::BAD_REQUEST));
+        $message = Headers::getMessage(Codes::BAD_REQUEST);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::BAD_REQUEST, $message);
     }
 
-    public function testExtensionUNAUTHORIZED()
+    public function testMessageUNAUTHORIZED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::UNAUTHORIZED));
+        $message = Headers::getMessage(Codes::UNAUTHORIZED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::UNAUTHORIZED, $message);
     }
 
-    public function testExtensionPAYMENT_REQUIRED()
+    public function testMessagePAYMENT_REQUIRED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::PAYMENT_REQUIRED));
+        $message = Headers::getMessage(Codes::PAYMENT_REQUIRED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::PAYMENT_REQUIRED, $message);
     }
 
-    public function testExtensionFORBIDDEN()
+    public function testMessageFORBIDDEN()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::FORBIDDEN));
+        $message = Headers::getMessage(Codes::FORBIDDEN);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::FORBIDDEN, $message);
     }
 
-    public function testExtensionNOT_FOUND()
+    public function testMessageNOT_FOUND()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::NOT_FOUND));
+        $message = Headers::getMessage(Codes::NOT_FOUND);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::NOT_FOUND, $message);
     }
 
-    public function testExtensionMETHOHD_NOT_ALLOWED()
+    public function testMessageMETHOD_NOT_ALLOWED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::METHOHD_NOT_ALLOWED));
+        $message = Headers::getMessage(Codes::METHOD_NOT_ALLOWED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::METHOD_NOT_ALLOWED, $message);
     }
 
-    public function testExtensionNOT_ACCEPTABLE()
+    public function testMessageNOT_ACCEPTABLE()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::NOT_ACCEPTABLE));
+        $message = Headers::getMessage(Codes::NOT_ACCEPTABLE);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::NOT_ACCEPTABLE, $message);
     }
 
-    public function testExtensionPROXY_AUTHENTICATION_REQUIRED()
+    public function testMessagePROXY_AUTHENTICATION_REQUIRED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::PROXY_AUTHENTICATION_REQUIRED));
+        $message = Headers::getMessage(Codes::PROXY_AUTHENTICATION_REQUIRED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::PROXY_AUTHENTICATION_REQUIRED, $message);
     }
 
-    public function testExtensionREQUEST_TIMEOUT()
+    public function testMessageREQUEST_TIMEOUT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::REQUEST_TIMEOUT));
+        $message = Headers::getMessage(Codes::REQUEST_TIMEOUT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::REQUEST_TIMEOUT, $message);
     }
 
-    public function testExtensionCONFLICT()
+    public function testMessageCONFLICT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::CONFLICT));
+        $message = Headers::getMessage(Codes::CONFLICT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::CONFLICT, $message);
     }
 
-    public function testExtensionGONE()
+    public function testMessageGONE()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::GONE));
+        $message = Headers::getMessage(Codes::GONE);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::GONE, $message);
     }
 
-    public function testExtensionLENGTH_REQUIRED()
+    public function testMessageLENGTH_REQUIRED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::LENGTH_REQUIRED));
+        $message = Headers::getMessage(Codes::LENGTH_REQUIRED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::LENGTH_REQUIRED, $message);
     }
 
-    public function testExtensionPRECONDITION_FAILED()
+    public function testMessagePRECONDITION_FAILED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::PRECONDITION_FAILED));
+        $message = Headers::getMessage(Codes::PRECONDITION_FAILED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::PRECONDITION_FAILED, $message);
     }
 
-    public function testExtensionPAYLOAD_TOO_LARGE()
+    public function testMessagePAYLOAD_TOO_LARGE()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::PAYLOAD_TOO_LARGE));
+        $message = Headers::getMessage(Codes::PAYLOAD_TOO_LARGE);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::PAYLOAD_TOO_LARGE, $message);
     }
 
-    public function testExtensionURI_TOO_LONG()
+    public function testMessageURI_TOO_LONG()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::URI_TOO_LONG));
+        $message = Headers::getMessage(Codes::URI_TOO_LONG);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::URI_TOO_LONG, $message);
     }
 
-    public function testExtensionUNSUPPORTED_MEDIA_TYPE()
+    public function testMessageUNSUPPORTED_MEDIA_TYPE()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::UNSUPPORTED_MEDIA_TYPE));
+        $message = Headers::getMessage(Codes::UNSUPPORTED_MEDIA_TYPE);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::UNSUPPORTED_MEDIA_TYPE, $message);
     }
 
-    public function testExtensionRANGE_NOT_SATISFIABLE()
+    public function testMessageRANGE_NOT_SATISFIABLE()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::RANGE_NOT_SATISFIABLE));
+        $message = Headers::getMessage(Codes::RANGE_NOT_SATISFIABLE);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::RANGE_NOT_SATISFIABLE, $message);
     }
 
-    public function testExtensionEXPECTATION_FAILED()
+    public function testMessageEXPECTATION_FAILED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::EXPECTATION_FAILED));
+        $message = Headers::getMessage(Codes::EXPECTATION_FAILED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::EXPECTATION_FAILED, $message);
     }
 
-    public function testExtensionIM_A_TEAPOT()
+    public function testMessageIM_A_TEAPOT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::IM_A_TEAPOT));
+        $message = Headers::getMessage(Codes::IM_A_TEAPOT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::IM_A_TEAPOT, $message);
     }
 
-    public function testExtensionMISDIRECT_REQUEST()
+    public function testMessageMISDIRECT_REQUEST()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::MISDIRECT_REQUEST));
+        $message = Headers::getMessage(Codes::MISDIRECT_REQUEST);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::MISDIRECT_REQUEST, $message);
     }
 
-    public function testExtensionUNPROCESSABLE_ENTITY()
+    public function testMessageUNPROCESSABLE_ENTITY()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::UNPROCESSABLE_ENTITY));
+        $message = Headers::getMessage(Codes::UNPROCESSABLE_ENTITY);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::UNPROCESSABLE_ENTITY, $message);
     }
 
-    public function testExtensionLOCKED()
+    public function testMessageLOCKED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::LOCKED));
+        $message = Headers::getMessage(Codes::LOCKED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::LOCKED, $message);
     }
 
-    public function testExtensionPRECONDITION_REQUIRED()
+    public function testMessagePRECONDITION_REQUIRED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::PRECONDITION_REQUIRED));
+        $message = Headers::getMessage(Codes::PRECONDITION_REQUIRED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::PRECONDITION_REQUIRED, $message);
     }
 
-    public function testExtensionINTERNAL_SERVER_ERROR()
+    public function testMessageINTERNAL_SERVER_ERROR()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::INTERNAL_SERVER_ERROR));
+        $message = Headers::getMessage(Codes::INTERNAL_SERVER_ERROR);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::INTERNAL_SERVER_ERROR, $message);
     }
-    public function testExtensionNOT_IMPLEMENTED()
+    public function testMessageNOT_IMPLEMENTED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::NOT_IMPLEMENTED));
+        $message = Headers::getMessage(Codes::NOT_IMPLEMENTED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::NOT_IMPLEMENTED, $message);
     }
-    public function testExtensionBAD_GATEWAY()
+    public function testMessageBAD_GATEWAY()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::BAD_GATEWAY));
+        $message = Headers::getMessage(Codes::BAD_GATEWAY);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::BAD_GATEWAY, $message);
     }
-    public function testExtensionSERVICE_UNAVAILABLE()
+    public function testMessageSERVICE_UNAVAILABLE()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::SERVICE_UNAVAILABLE));
+        $message = Headers::getMessage(Codes::SERVICE_UNAVAILABLE);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::SERVICE_UNAVAILABLE, $message);
     }
-    public function testExtensionGATEWAY_TIMEOUT()
+    public function testMessageGATEWAY_TIMEOUT()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::GATEWAY_TIMEOUT));
+        $message = Headers::getMessage(Codes::GATEWAY_TIMEOUT);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::GATEWAY_TIMEOUT, $message);
     }
-    public function testExtensionHTTP_VERSION_NOT_SUPPORTED()
+    public function testMessageHTTP_VERSION_NOT_SUPPORTED()
     {
-        $this->assertIsString(Headers::getMessage(HeaderCode::HTTP_VERSION_NOT_SUPPORTED));
+        $message = Headers::getMessage(Codes::HTTP_VERSION_NOT_SUPPORTED);
+        $this->assertIsString($message);
+        $this->assertEquals(Messages::HTTP_VERSION_NOT_SUPPORTED, $message);
     }
 }
