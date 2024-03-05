@@ -1,8 +1,8 @@
 <?php
 
-namespace JuanchoSL\HttpHeaders;
+namespace JuanchoSL\HttpHeaders\Constants\Status;
 
-class HeaderMessage
+class Messages
 {
 
     //Informational 1xx
@@ -36,7 +36,7 @@ class HeaderMessage
     const PAYMENT_REQUIRED = 'Payment Required';
     const FORBIDDEN = 'Forbidden';
     const NOT_FOUND = 'Not Found';
-    const METHOHD_NOT_ALLOWED = 'Method Not Allowed';
+    const METHOD_NOT_ALLOWED = 'Method Not Allowed';
     const NOT_ACCEPTABLE = 'Not Acceptable';
     const PROXY_AUTHENTICATION_REQUIRED = 'Proxy Authentication Required';
     const REQUEST_TIMEOUT = 'Request Timeout';

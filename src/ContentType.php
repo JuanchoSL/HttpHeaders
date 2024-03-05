@@ -2,6 +2,9 @@
 
 namespace JuanchoSL\HttpHeaders;
 
+use JuanchoSL\HttpHeaders\Constants\Types\Extensions;
+use JuanchoSL\HttpHeaders\Constants\Types\MimeTypes;
+
 class ContentType
 {
     /**
@@ -9,133 +12,131 @@ class ContentType
      * @param string $downloadFileName Fichero a comprobar
      * @return string Tipo de contenido del fichero
      */
-    public static function get(string $downloadFileName): string
+    public static function get(?string $downloadFileName): string
     {
         $downloadFileName = isset($downloadFileName) ? $downloadFileName : basename($_SERVER['SCRIPT_NAME']);
-        if (is_file($downloadFileName) && (file_exists($downloadFileName))) {
+        if (is_file($downloadFileName) && file_exists($downloadFileName)) {
             $ext = pathinfo($downloadFileName, PATHINFO_EXTENSION);
         } elseif (is_string($downloadFileName)) {
             $ext = $downloadFileName;
-        } else {
-            exit();
         }
         switch ($ext) {
-            case ExtensionTypes::TYPE_EXTENSION_JS:
-                return MimeTypes::TYPE_MIME_JS;
+            case Extensions::JS:
+                return MimeTypes::JS;
 
-            case ExtensionTypes::TYPE_EXTENSION_XLS:
-                return MimeTypes::TYPE_MIME_EXCEL;
+            case Extensions::XLS:
+                return MimeTypes::EXCEL;
 
-            case ExtensionTypes::TYPE_EXTENSION_XLSX:
-                return MimeTypes::TYPE_MIME_EXCEL;
+            case Extensions::XLSX:
+                return MimeTypes::EXCEL;
 
-            case ExtensionTypes::TYPE_EXTENSION_DOC:
-                return MimeTypes::TYPE_MIME_WORD;
+            case Extensions::DOC:
+                return MimeTypes::WORD;
 
-            case ExtensionTypes::TYPE_EXTENSION_DOCX:
-                return MimeTypes::TYPE_MIME_WORD;
+            case Extensions::DOCX:
+                return MimeTypes::WORD;
 
-            case ExtensionTypes::TYPE_EXTENSION_PPT:
-                return MimeTypes::TYPE_MIME_POWERPOINT;
+            case Extensions::PPT:
+                return MimeTypes::POWERPOINT;
 
-            case ExtensionTypes::TYPE_EXTENSION_PPTX:
-                return MimeTypes::TYPE_MIME_POWERPOINT;
+            case Extensions::PPTX:
+                return MimeTypes::POWERPOINT;
 
-            case ExtensionTypes::TYPE_EXTENSION_CSV:
-                return MimeTypes::TYPE_MIME_CSV;
+            case Extensions::CSV:
+                return MimeTypes::CSV;
 
-            case ExtensionTypes::TYPE_EXTENSION_PDF:
-                return MimeTypes::TYPE_MIME_PDF;
+            case Extensions::PDF:
+                return MimeTypes::PDF;
 
-            case ExtensionTypes::TYPE_EXTENSION_JSON:
-                return MimeTypes::TYPE_MIME_JSON;
+            case Extensions::JSON:
+                return MimeTypes::JSON;
 
-            case ExtensionTypes::TYPE_EXTENSION_XML:
-                return MimeTypes::TYPE_MIME_XML;
+            case Extensions::XML:
+                return MimeTypes::XML;
 
-            case ExtensionTypes::TYPE_EXTENSION_HTM:
-                return MimeTypes::TYPE_MIME_HTML;
+            case Extensions::HTM:
+                return MimeTypes::HTML;
 
-            case ExtensionTypes::TYPE_EXTENSION_HTML:
-                return MimeTypes::TYPE_MIME_HTML;
+            case Extensions::HTML:
+                return MimeTypes::HTML;
 
-            case ExtensionTypes::TYPE_EXTENSION_TXT:
-                return MimeTypes::TYPE_MIME_PLAIN;
+            case Extensions::TXT:
+                return MimeTypes::PLAIN;
 
-            case ExtensionTypes::TYPE_EXTENSION_PLAIN:
-                return MimeTypes::TYPE_MIME_PLAIN;
+            case Extensions::PLAIN:
+                return MimeTypes::PLAIN;
 
-            case ExtensionTypes::TYPE_EXTENSION_CSS:
-                return MimeTypes::TYPE_MIME_CSS;
+            case Extensions::CSS:
+                return MimeTypes::CSS;
 
-            case ExtensionTypes::TYPE_EXTENSION_JPG:
-                return MimeTypes::TYPE_MIME_JPEG;
+            case Extensions::JPG:
+                return MimeTypes::JPEG;
 
-            case ExtensionTypes::TYPE_EXTENSION_JPEG:
-                return MimeTypes::TYPE_MIME_JPEG;
+            case Extensions::JPEG:
+                return MimeTypes::JPEG;
 
-            case ExtensionTypes::TYPE_EXTENSION_GIF:
-                return MimeTypes::TYPE_MIME_GIF;
+            case Extensions::GIF:
+                return MimeTypes::GIF;
 
-            case ExtensionTypes::TYPE_EXTENSION_PNG:
-                return MimeTypes::TYPE_MIME_PNG;
+            case Extensions::PNG:
+                return MimeTypes::PNG;
 
-            case ExtensionTypes::TYPE_EXTENSION_WEBP:
-                return MimeTypes::TYPE_MIME_WEBP;
+            case Extensions::WEBP:
+                return MimeTypes::WEBP;
 
-            case ExtensionTypes::TYPE_EXTENSION_BMP:
-                return MimeTypes::TYPE_MIME_BMP;
+            case Extensions::BMP:
+                return MimeTypes::BMP;
 
-            case ExtensionTypes::TYPE_EXTENSION_ICO:
-                return MimeTypes::TYPE_MIME_ICO;
+            case Extensions::ICO:
+                return MimeTypes::ICO;
 
-            case ExtensionTypes::TYPE_EXTENSION_MPG:
-                return MimeTypes::TYPE_MIME_MPEG;
+            case Extensions::MPG:
+                return MimeTypes::MPEG;
 
-            case ExtensionTypes::TYPE_EXTENSION_MPEG:
-                return MimeTypes::TYPE_MIME_MPEG;
+            case Extensions::MPEG:
+                return MimeTypes::MPEG;
 
-            case ExtensionTypes::TYPE_EXTENSION_AVI:
-                return MimeTypes::TYPE_MIME_MPEG;
+            case Extensions::AVI:
+                return MimeTypes::MPEG;
 
-            case ExtensionTypes::TYPE_EXTENSION_MP4:
-                return MimeTypes::TYPE_MIME_MPEG;
+            case Extensions::MP4:
+                return MimeTypes::MPEG;
 
-            case ExtensionTypes::TYPE_EXTENSION_APK:
-                return MimeTypes::TYPE_MIME_APK;
+            case Extensions::APK:
+                return MimeTypes::APK;
 
-            case ExtensionTypes::TYPE_EXTENSION_EOT:
-                return MimeTypes::TYPE_MIME_EOT;
+            case Extensions::EOT:
+                return MimeTypes::EOT;
 
-            case ExtensionTypes::TYPE_EXTENSION_TTF:
-                return MimeTypes::TYPE_MIME_TTF;
+            case Extensions::TTF:
+                return MimeTypes::TTF;
 
-            case ExtensionTypes::TYPE_EXTENSION_OTF:
-                return MimeTypes::TYPE_MIME_OTF;
+            case Extensions::OTF:
+                return MimeTypes::OTF;
 
-            case ExtensionTypes::TYPE_EXTENSION_WOFF:
-                return MimeTypes::TYPE_MIME_WOFF;
+            case Extensions::WOFF:
+                return MimeTypes::WOFF;
 
-            case ExtensionTypes::TYPE_EXTENSION_WOFF2:
-                return MimeTypes::TYPE_MIME_WOFF2;
+            case Extensions::WOFF2:
+                return MimeTypes::WOFF2;
 
-            case ExtensionTypes::TYPE_EXTENSION_SVG:
-                return MimeTypes::TYPE_MIME_SVG;
+            case Extensions::SVG:
+                return MimeTypes::SVG;
 
-            case ExtensionTypes::TYPE_EXTENSION_ZIP:
-                return MimeTypes::TYPE_MIME_OCTET;
+            case Extensions::ZIP:
+                return MimeTypes::OCTET;
 
-            case ExtensionTypes::TYPE_EXTENSION_RAR:
-                return MimeTypes::TYPE_MIME_OCTET;
+            case Extensions::RAR:
+                return MimeTypes::OCTET;
 
-            case ExtensionTypes::TYPE_EXTENSION_EXE:
-                return MimeTypes::TYPE_MIME_OCTET;
+            case Extensions::EXE:
+                return MimeTypes::OCTET;
 
-            case ExtensionTypes::TYPE_EXTENSION_MD:
-                return MimeTypes::TYPE_MIME_MARKDOWN;
+            case Extensions::MD:
+                return MimeTypes::MARKDOWN;
 
             default:
-                return MimeTypes::TYPE_MIME_OCTET;
+                return MimeTypes::OCTET;
 
         }
     }

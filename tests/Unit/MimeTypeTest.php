@@ -2,7 +2,7 @@
 
 namespace JuanchoSL\HttpHeaders\Tests\Unit;
 
-use JuanchoSL\HttpHeaders\MimeTypes;
+use JuanchoSL\HttpHeaders\Constants\Types\MimeTypes;
 use PHPUnit\Framework\TestCase;
 
 
@@ -10,111 +10,111 @@ class MimeTypeTest extends TestCase
 {
     public function testExtensionJs()
     {
-        $this->assertEquals('text/javascript', MimeTypes::TYPE_MIME_JS);
+        $this->assertEquals('text/javascript', MimeTypes::JS);
     }
 
     public function testExtensionExcel()
     {
-        $this->assertEquals('application/vnd.ms-excel', MimeTypes::TYPE_MIME_EXCEL);
+        $this->assertEquals('application/vnd.ms-excel', MimeTypes::EXCEL);
     }
     public function testExtensionWord()
     {
-        $this->assertEquals('application/vnd.ms-word', MimeTypes::TYPE_MIME_WORD);
+        $this->assertEquals('application/vnd.ms-word', MimeTypes::WORD);
     }
     public function testExtensionPowerpoint()
     {
-        $this->assertEquals('application/vnd.mspowerpoint', MimeTypes::TYPE_MIME_POWERPOINT);
+        $this->assertEquals('application/vnd.mspowerpoint', MimeTypes::POWERPOINT);
     }
     public function testExtensionCsv()
     {
-        $this->assertEquals('text/csv', MimeTypes::TYPE_MIME_CSV);
+        $this->assertEquals('text/csv', MimeTypes::CSV);
     }
     public function testExtensionPdf()
     {
-        $this->assertEquals('application/pdf', MimeTypes::TYPE_MIME_PDF);
+        $this->assertEquals('application/pdf', MimeTypes::PDF);
     }
     public function testExtensionJson()
     {
-        $this->assertEquals('application/json', MimeTypes::TYPE_MIME_JSON);
+        $this->assertEquals('application/json', MimeTypes::JSON);
     }
     public function testExtensionXml()
     {
-        $this->assertEquals('application/xml', MimeTypes::TYPE_MIME_XML);
+        $this->assertEquals('application/xml', MimeTypes::XML);
     }
     public function testExtensionHtml()
     {
-        $this->assertEquals('text/html', MimeTypes::TYPE_MIME_HTML);
+        $this->assertEquals('text/html', MimeTypes::HTML);
     }
     public function testExtensionPlain()
     {
-        $this->assertEquals('text/plain', MimeTypes::TYPE_MIME_PLAIN);
+        $this->assertEquals('text/plain', MimeTypes::PLAIN);
     }
     public function testExtensionCss()
     {
-        $this->assertEquals('text/css', MimeTypes::TYPE_MIME_CSS);
+        $this->assertEquals('text/css', MimeTypes::CSS);
     }
     public function testExtensionJpeg()
     {
-        $this->assertEquals('image/jpeg', MimeTypes::TYPE_MIME_JPEG);
+        $this->assertEquals('image/jpeg', MimeTypes::JPEG);
     }
     public function testExtensionPng()
     {
-        $this->assertEquals('image/png', MimeTypes::TYPE_MIME_PNG);
+        $this->assertEquals('image/png', MimeTypes::PNG);
     }
     public function testExtensionBmp()
     {
-        $this->assertEquals('image/bmp', MimeTypes::TYPE_MIME_BMP);
+        $this->assertEquals('image/bmp', MimeTypes::BMP);
     }
     public function testExtensionWebp()
     {
-        $this->assertEquals('image/webp', MimeTypes::TYPE_MIME_WEBP);
+        $this->assertEquals('image/webp', MimeTypes::WEBP);
     }
     public function testExtensionGif()
     {
-        $this->assertEquals('image/gif', MimeTypes::TYPE_MIME_GIF);
+        $this->assertEquals('image/gif', MimeTypes::GIF);
     }
     public function testExtensionIco()
     {
-        $this->assertEquals('image/x-icon', MimeTypes::TYPE_MIME_ICO);
+        $this->assertEquals('image/x-icon', MimeTypes::ICO);
     }
     public function testExtensionMpeg()
     {
-        $this->assertEquals('video/mpeg', MimeTypes::TYPE_MIME_MPEG);
+        $this->assertEquals('video/mpeg', MimeTypes::MPEG);
     }
     public function testExtensionEot()
     {
-        $this->assertEquals('application/vnd.ms-fontobject', MimeTypes::TYPE_MIME_EOT);
+        $this->assertEquals('application/vnd.ms-fontobject', MimeTypes::EOT);
     }
     public function testExtensionTtf()
     {
-        $this->assertEquals('font/ttf', MimeTypes::TYPE_MIME_TTF);
+        $this->assertEquals('font/ttf', MimeTypes::TTF);
     }
     public function testExtensionWoff()
     {
-        $this->assertEquals('font/woff', MimeTypes::TYPE_MIME_WOFF);
+        $this->assertEquals('font/woff', MimeTypes::WOFF);
     }
     public function testExtensionWoff2()
     {
-        $this->assertEquals('font/woff2', MimeTypes::TYPE_MIME_WOFF2);
+        $this->assertEquals('font/woff2', MimeTypes::WOFF2);
     }
     public function testExtensionOtf()
     {
-        $this->assertEquals('font/otf', MimeTypes::TYPE_MIME_OTF);
+        $this->assertEquals('font/otf', MimeTypes::OTF);
     }
     public function testExtensionApk()
     {
-        $this->assertEquals('application/vnd.android.package-archive', MimeTypes::TYPE_MIME_APK);
+        $this->assertEquals('application/vnd.android.package-archive', MimeTypes::APK);
     }
     public function testExtensionOctet()
     {
-        $this->assertEquals('application/octet-stream', MimeTypes::TYPE_MIME_OCTET);
+        $this->assertEquals('application/octet-stream', MimeTypes::OCTET);
     }
     public function testExtensionZip()
     {
-        $this->assertEquals('application/zip', MimeTypes::TYPE_MIME_ZIP);
+        $this->assertEquals('application/zip', MimeTypes::ZIP);
     }
     public function testExtensionSvg()
     {
-        $this->assertEquals('image/svg+xml', MimeTypes::TYPE_MIME_SVG);
+        $this->assertEquals('image/svg+xml', MimeTypes::SVG);
     }
 }

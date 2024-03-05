@@ -6,8 +6,11 @@
     "homepage": "https://github.com/JuanchoSL/HttpHeaders",
     "minimum-stability": "stable",
     "keywords": [
-        "log",
-        "debug"
+        "headers",
+        "http",
+        "file extensions",
+        "mime types",
+        "content types"
     ],
     "authors": [
         {

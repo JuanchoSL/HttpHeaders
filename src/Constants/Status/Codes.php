@@ -1,8 +1,8 @@
 <?php
 
-namespace JuanchoSL\HttpHeaders;
+namespace JuanchoSL\HttpHeaders\Constants\Status;
 
-class HeaderCode
+class Codes
 {
 
     const CONTINUE = 100;
@@ -35,7 +35,7 @@ class HeaderCode
     const PAYMENT_REQUIRED = 402;
     const FORBIDDEN = 403;
     const NOT_FOUND = 404;
-    const METHOHD_NOT_ALLOWED = 405;
+    const METHOD_NOT_ALLOWED = 405;
     const NOT_ACCEPTABLE = 406;
     const PROXY_AUTHENTICATION_REQUIRED = 407;
     const REQUEST_TIMEOUT = 408;
