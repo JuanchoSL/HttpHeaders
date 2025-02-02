@@ -4,6 +4,8 @@ namespace JuanchoSL\HttpHeaders\Constants\Types;
 class MimeTypes
 {
 
+    const ALL = '*/*';
+    const MESSAGE = 'message/http';
     const JS = 'text/javascript';
     const EXCEL = 'application/vnd.ms-excel';
     const WORD = 'application/vnd.ms-word';
