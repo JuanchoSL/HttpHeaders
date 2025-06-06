@@ -8,7 +8,9 @@ class MimeTypes
     const MESSAGE = 'message/http';
     const JS = 'text/javascript';
     const EXCEL = 'application/vnd.ms-excel';
+    const EXCELX = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
     const WORD = 'application/vnd.ms-word';
+    const DOCX = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
     const POWERPOINT = 'application/vnd.mspowerpoint';
     const CSV = 'text/csv';
     const PDF = 'application/pdf';

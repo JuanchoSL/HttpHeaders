@@ -22,7 +22,7 @@ class ContentTypeTest extends TestCase
     public function testExtensionXlsx()
     {
         $response = ContentType::get(Extensions::XLSX);
-        $this->assertEquals('application/vnd.ms-excel', $response);
+        $this->assertEquals('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', $response);
     }
     public function testExtensionDoc()
     {
@@ -32,7 +32,7 @@ class ContentTypeTest extends TestCase
     public function testExtensionDocx()
     {
         $response = ContentType::get(Extensions::DOCX);
-        $this->assertEquals('application/vnd.ms-word', $response);
+        $this->assertEquals('application/vnd.openxmlformats-officedocument.wordprocessingml.document', $response);
     }
     public function testExtensionPpt()
     {
