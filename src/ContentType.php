@@ -28,13 +28,13 @@ class ContentType
                 return MimeTypes::EXCEL;
 
             case Extensions::XLSX:
-                return MimeTypes::EXCEL;
+                return MimeTypes::EXCELX;
 
             case Extensions::DOC:
                 return MimeTypes::WORD;
 
             case Extensions::DOCX:
-                return MimeTypes::WORD;
+                return MimeTypes::DOCX;
 
             case Extensions::PPT:
                 return MimeTypes::POWERPOINT;
