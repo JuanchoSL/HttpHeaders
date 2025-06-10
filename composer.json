@@ -4,7 +4,6 @@
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/JuanchoSL/HttpHeaders",
-    "minimum-stability": "stable",
     "keywords": [
         "headers",
         "http",
@@ -20,7 +19,7 @@
         }
     ],
     "require": {
-        "php": "^7.1 || ^8.0",
+        "php": "^8.0",
         "ext-mbstring": "*"
     },
     "require-dev": {
