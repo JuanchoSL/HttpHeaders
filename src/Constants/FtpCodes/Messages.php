@@ -1,0 +1,61 @@
+<?php declare(strict_types=1);
+
+namespace JuanchoSL\HttpHeaders\Constants\FtpCodes;
+
+class Messages
+{
+    const RESTART_MARKER_REPLAY = 'Restart marker replay';
+    const SERVICE_READY_IN_NNN_MINUTES = 'Service ready in nnn minutes.';
+    const DATA_CONNECTION_ALREADY_OPEN = 'Data connection already open; transfer starting.';
+    const FILE_STATUS_OKAY = 'File status okay; about to open data connection.';
+    const COMMAND_NOT_IMPLEMENTED_SUPERFLUOUS = 'Command not implemented, superfluous at this site.';
+    const SYSTEM_STATUS = 'System status, or system help reply.';
+    const DIRECTORY_STATUS = 'Directory status.';
+    const FILE_STATUS = 'File status.';
+    const HELP_MESSAGE = 'Help message. Explains how to use the server or the meaning of a particular non-standard command. This reply is useful only to the human user.';
+    const NAME_SYSTEM_TYPE = 'NAME system type. Where NAME is an official system name from the registry kept by IANA.';
+    const SERVICE_READY_FOR_NEW_USER = 'Service ready for new user.';
+    const SERVICE_CLOSING_CONTROL_CONNECTION = 'Service closing control connection. Logged out if appropriate.';
+    const DATA_CONNECTION_OPEN = 'Data connection open; no transfer in progress.';
+    const CLOSING_DATA_CONNECTION = 'Closing data connection. Requested file action successful (for example, file transfer or file abort).';
+    const ENTERING_PASSIVE_MODE = 'Entering Passive Mode (h1,h2,h3,h4,p1,p2).';
+    const ENTERING_LONG_PASSIVE_MODE = 'Entering Long Passive Mode (long address, port).';
+    const ENTERING_EXTENDED_PASSIVE_MODE = 'Entering Extended Passive Mode (|||port|).';
+    const USER_LOGGED_IN_PROCEED = 'User logged in, proceed.';
+    const USER_LOGGED_IN_AUTHORIZED = 'User logged in, authorized by security data exchange.';
+    const SERVER_ACCEPTS_MO_SECURITY_MECHANISM_SPECIFIED_BY_THE_CLIENT = 'Server accepts the security mechanism specified by the client; no security data needs to be exchanged.';
+    const SERVER_ACCEPTS_NO_SECURITY_DATA_GIVEN_BY_THE_CLIENT = 'Server accepts the security data given by the client; no further security data needs to be exchanged.';
+    const REQUESTED_FILE_ACTION_WAS_OKAY = 'Requested file action was okay, completed.';
+    const USER_NAME_OKAY = 'User name okay, password needed.';
+    const NO_NEED_ACCOUNT_FOR_LOGIN = 'No need account for login.';
+    const SERVER_ACCEPTS_THE_SECURITY_MECHANISM_SPECIFIED_BY_THE_CLIENT = 'Server accepts the security mechanism specified by the client; some security data needs to be exchanged.';
+    const SERVER_ACCEPTS_THE_SECURITY_DATA_GIVEN_BY_THE_CLIENT = 'Server accepts the security data given by the client; more security data needs to be exchanged.';
+    const USERNAME_OKAY = 'Username okay, password okay. Challenge is ';
+    const SERVICE_NOT_AVAILABLE = 'Service NOT available, closing control connection. This may be a reply to any command if the service knows it must shut down.';
+    const CANT_OPEN_DATA_CONNECTION = 'Can not open data connection.';
+    const CONNECTION_CLOSED = 'Connection closed; transfer aborted.';
+    const INVALID_USERNAME_OR_PASSWORD = 'Invalid username or password';
+    const NEED_SOME_UNAVAILABLE_RESOURCE_TO_PROCESS_SECURITY = 'Need some unavailable resource to process security.';
+    const REQUESTED_HOST_UNAVAILABLE = 'Requested host unavailable.';
+    const REQUESTED_FILE_ACTION_NOT_TAKEN = 'Requested file action not taken. File unavailable (e.g., file busy).';
+    const REQUESTED_ACTION_ABORTED = 'Requested action aborted. Local error in processing.';
+    const REQUESTED_ACTION_NOT_TAKEN = 'Requested action not taken. Insufficient storage space in system.';
+    const SYNTAX_ERROR_IN_PARAMETERS_OR_ARGUMENTS = 'Syntax error in parameters or arguments.';
+    const COMMAND_NOT_IMPLEMENTED = 'Command not implemented.';
+    const BAD_SEQUENCE_OF_COMMANDS = 'Bad sequence of commands.';
+    const COMMAND_NOT_IMPLEMENTED_FOR_THAT_PARAMETER = 'Command not implemented for that parameter.';
+    const NOT_LOGGED_IN = 'Not logged in.';
+    const NEED_ACCOUNT_FOR_STORING_FILES = 'Need account for storing files.';
+    const COMMAND_PROTECTION_LEVEL_DENIED_FOR_POLICY_REASONS = 'Command protection level denied for policy reasons.';
+    const REQUEST_DENIED_FOR_POLICY_REASONS = 'Request denied for policy reasons.';
+    const FAILED_SECURITY_CHECK = 'Failed security check.';
+    const DATA_PROTECTION_LEVEL_NOT_SUPPORTED_BY_SECURITY_MECHANISM = 'Data protection level not supported by security mechanism.';
+    const COMMAND_PROTECTION_LEVEL_NOT_SUPPORTED_BY_SECURITY_MECHANISM = 'Command protection level not supported by security mechanism.';
+    const FILE_UNAVAILABLE = 'Requested action not taken. File unavailable (e.g., file not found, no access).';
+    const PAGE_TYPE_UNKNOWN = 'Requested action aborted. Page type unknown.';
+    const REQUESTED_FILE_ACTION_ABORTED = 'Requested file action aborted. Exceeded storage allocation (for current directory or dataset).';
+    const FILE_NAME_NOT_ALLOWED = 'Requested action not taken. File name not allowed.';
+    const INTEGRITY_PROTECTED_REPLY = 'Integrity protected reply.';
+    const CONFIDENTIALITY_AND_INTEGRITY_PROTECTED_REPLY = 'Confidentiality and integrity protected reply.';
+    const CONFIDENTIALITY_PROTECTED_REPLY = 'Confidentiality protected reply.';
+}

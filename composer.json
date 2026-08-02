@@ -7,6 +7,7 @@
     "keywords": [
         "headers",
         "http",
+        "ftp",
         "file extensions",
         "mime types",
         "content types"
@@ -14,8 +15,9 @@
     "authors": [
         {
             "name": "Juan Sánchez Lecegui",
-            "email": "JuanchoSL@hotmail.com",
-            "homepage": "https://github.com/JuanchoSL/"
+            "email": "Juan.Sanchez@tecnicosweb.com",
+            "homepage": "https://www.linkedin.com/in/juansanchezlecegui/",
+            "role": "Developer"
         }
     ],
     "require": {
