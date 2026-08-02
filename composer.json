@@ -4,10 +4,10 @@
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/JuanchoSL/HttpHeaders",
-    "minimum-stability": "stable",
     "keywords": [
         "headers",
         "http",
+        "ftp",
         "file extensions",
         "mime types",
         "content types"
