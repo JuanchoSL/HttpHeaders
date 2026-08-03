@@ -26,6 +26,8 @@ class Messages
     const SERVER_ACCEPTS_MO_SECURITY_MECHANISM_SPECIFIED_BY_THE_CLIENT = 'Server accepts the security mechanism specified by the client; no security data needs to be exchanged.';
     const SERVER_ACCEPTS_NO_SECURITY_DATA_GIVEN_BY_THE_CLIENT = 'Server accepts the security data given by the client; no further security data needs to be exchanged.';
     const REQUESTED_FILE_ACTION_WAS_OKAY = 'Requested file action was okay, completed.';
+    const ATTRIBUTES_CHANGED_OK = 'The requested attributes has been changed ok.';
+    const PATHNAME_CREATED = 'Pathname created.';
     const USER_NAME_OKAY = 'User name okay, password needed.';
     const NO_NEED_ACCOUNT_FOR_LOGIN = 'No need account for login.';
     const SERVER_ACCEPTS_THE_SECURITY_MECHANISM_SPECIFIED_BY_THE_CLIENT = 'Server accepts the security mechanism specified by the client; some security data needs to be exchanged.';

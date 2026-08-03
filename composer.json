@@ -1,6 +1,6 @@
 {
     "name": "juanchosl/httpheaders",
-    "description": "Little methods collection in order to create http headers",
+    "description": "Little methods and constants collection in order to create http headers and reuse standard codes and messages",
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/JuanchoSL/HttpHeaders",
