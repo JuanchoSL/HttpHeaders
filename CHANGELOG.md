@@ -1,10 +1,11 @@
 # Change Log - HttpHeaders
 
-## [1.0.2] - 2025
+## [1.0.2] - 2026-08-04
 
 ### Added
 
-- Checked full compatibility with php 8.5
+- Checked full compatibility with php 8.6
+- Response codes and related messages from FTP servers
 
 ### Changed
 
